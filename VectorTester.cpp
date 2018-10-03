@@ -13,10 +13,24 @@ int main()
    //-------------------------------------------------------------------------
 
    // test IntegerVector: put, get, size, out_of_range
-
-   std::cout << "--------------" << std::endl;
+   std::cout << std::endl;
+   std::cout << "----------------" << std::endl;
    std::cout << "IntegerVector:" << std::endl;
-   std::cout << "--------------" << std::endl;
+   std::cout << "----------------" << std::endl;
+
+   iv.put(65);
+   iv.put(66,1);
+   std::cout << iv.get(0) << std::endl;
+   std::cout << iv.get(1) << std::endl;
+   std::cout << iv.size() << std::endl;
+   try
+   {
+	std::cout << iv.get(2) << std::endl;
+   }
+   catch(const std::out_of_range& oor)
+   {
+	std::cerr << "Out of Range error:" << oor.what() << '\n'<< std::endl;
+   }
 
    //-------------------------------------------------------------------------
 
