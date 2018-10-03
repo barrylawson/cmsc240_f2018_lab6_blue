@@ -2,6 +2,7 @@
 #include "IntegerVector.h"
 #include "DoubleVector.h"
 #include "CharacterVector.h"
+#include <stdexcept>
 
 int main()
 {
@@ -29,10 +30,23 @@ int main()
    //-------------------------------------------------------------------------
 
    // test DoubleVector: put, get, size, out_of_range
-
+   dv.put(77.0);
+   dv.put(65.0, 3);
+   std::cout << dv.get(1) << std::endl;
+   std::cout << dv.size() << std::endl;
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
+   std::cout << "-------------" << std::endl;
+   std::cout << "-------------" << std::endl;
    std::cout << "DoubleVector:" << std::endl;
+   try
+   {
+      std::cout << dv.get(100) << std::endl;
+   }
+   catch(const std::out_of_range& oor) {
+      std::cout << "Error: out of bounds!" << std::endl;
+   }
+
    std::cout << "-------------" << std::endl;
 
    //-------------------------------------------------------------------------
