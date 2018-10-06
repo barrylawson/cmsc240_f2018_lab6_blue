@@ -26,7 +26,7 @@ void CharacterVector::put(char value, int index)
 {
 	if (index < this->size())
 	{
-		characterVector.at(index) = value;
+		characterVector[index] = value;
 	}
 	else
 	{
