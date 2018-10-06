@@ -100,6 +100,26 @@ int main()
    std::cout << "appended-to IntegerVector:" << std::endl;
    std::cout << "--------------------------" << std::endl;
 
+   std::cout << "In CV: " << std::endl;
+   for(int i = 0; i < cv.size(); i++)
+   {
+	std::cout << cv.get(i) << std::endl;
+   }
+
+   std::cout << "In DV: " << std::endl;
+   for(int i = 0; i < dv.size(); i++)
+   {
+	std::cout << dv.get(i) << std::endl;
+   }
+
+   iv2.appendCharacterVector(cv);
+   iv2.appendDoubleVector(dv);
+      
+   std::cout << "In IV2: " << std::endl;
+   for(int i = 0; i < iv2.size(); i++)
+   {
+	std::cout << iv2.get(i) << std::endl;
+   }
    //-------------------------------------------------------------------------
 
    // using empty CharacterVector, test appending iv & dv from above
