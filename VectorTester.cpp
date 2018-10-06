@@ -13,32 +13,35 @@ int main()
    //-------------------------------------------------------------------------
 
    // test IntegerVector: put, get, size, out_of_range
+
+   // }
    std::cout << std::endl;
    std::cout << "----------------" << std::endl;
    std::cout << "IntegerVector:" << std::endl;
    std::cout << "----------------" << std::endl;
 
+
+   std::cout << "Putting '65' and '66' in integer vector" << std::endl;
    iv.put(65);
    iv.put(66,1);
-   std::cout << iv.get(0) << std::endl;
-   std::cout << iv.get(1) << std::endl;
-   std::cout << iv.size() << std::endl;
+   std::cout << "Testing get method for 0 index: " << iv.get(0) << std::endl;
+   std::cout << "Testing get method for 1 index: " << iv.get(1) << std::endl;
+   std::cout << "Testing  the size method: " <<  iv.size() << std::endl;
+   std::cout << "Testing an out of range vale index 100: ";
    try
    {
-	std::cout << iv.get(2) << std::endl;
+	std::cout << iv.get(100) << std::endl;
    }
    catch(const std::out_of_range& oor)
    {
 	std::cerr << "Out of Range error:" << oor.what() << '\n'<< std::endl;
+        std::cout <<"Error out of bounds!" << std::endl;
    }
 
    //-------------------------------------------------------------------------
 
    // test CharacterVector: put, get, size, out_of_range
 
-   
-
-   
    // }
    std::cout << std::endl;
    std::cout << "----------------" << std::endl;
