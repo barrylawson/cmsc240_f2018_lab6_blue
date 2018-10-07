@@ -132,7 +132,7 @@ std::cout << "----------------------------" << std::endl;
 std::cout << "appended-to CharacterVector:" << std::endl;
 std::cout << "----------------------------" << std::endl;
 
-std::cout << "In IV2: " << std::endl;
+std::cout << "In IV: " << std::endl;
 for (int i = 0; i < iv.size(); ++i)
 {
    std::cout << iv.get(i) << std::endl;
@@ -147,12 +147,11 @@ for (int i = 0; i < dv.size(); ++i)
 cv2.appendIntegerVector(iv);
 cv2.appendDoubleVector(dv);
 
+std::cout << "In CV2: " << std::endl;
 for (int i = 0; i < cv2.size(); ++i)
 {
    std::cout << cv2.get(i) << std::endl;  
 }
-
-
 
    //-------------------------------------------------------------------------
 
@@ -162,23 +161,26 @@ DoubleVector dv2;
 std::cout << std::endl; std::cout << "-------------------------" <<
 std::endl; std::cout << "appended-to DoubleVector:" << std::endl; std::cout
 << "-------------------------" << std::endl;
+
+std::cout << "In CV: " << std::endl;
+for (int i = 0; i < cv.size(); ++i)
+{
+   std::cout << cv.get(i) << std::endl;
+}
+
+std::cout << "In IV: " << std::endl;
+for (int i = 0; i < iv.size(); ++i)
+{
+   std::cout << iv.get(i) << std::endl;
+}
+dv2.appendCharacterVector(cv);
+dv2.appendCharacterVector(cv);
+
 std::cout << "In DV2: " << std::endl;
 
-dv2.appendCharacterVector(cv);
 for(int i = 0; i < dv2.size(); i++) {
     std::cout << dv2.get(i) << std::endl;
    }
-
-std::cout << "[979797979897979799]" << std::endl;
-std::cout << std::endl;
-
-dv2.appendIntegerVector(iv);
-for(int i = 0; i < dv2.size(); i++) {
-    std::cout << dv2.get(i);
-   }
-std::cout << std::endl;
-std::cout << "[97979797989797979901234]" << std::endl;
-std::cout << std::endl;
 
    //-------------------------------------------------------------------------
 
