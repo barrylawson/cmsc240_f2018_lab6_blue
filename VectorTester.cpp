@@ -73,22 +73,29 @@ std::cout << "--------------------" << std::endl;
    //-------------------------------------------------------------------------
 
    // test DoubleVector: put, get, size, out_of_range
-dv.put(77.0);
-dv.put(65.0, 3);
-std::cout << dv.get(1) << std::endl;
-std::cout << dv.size() << std::endl;
-std::cout << std::endl;
-std::cout << "-------------" << std::endl;
-std::cout << "-------------" << std::endl;
-std::cout << "-------------" << std::endl;
-std::cout << "DoubleVector:" << std::endl;
-try
-{
-   std::cout << dv.get(100) << std::endl;
-}
-catch(const std::out_of_range& oor) {
-   std::cout << "Error: out of bounds!" << std::endl;
-}
+
+  std::cout << std::endl;
+  std::cout << "----------------" << std::endl;
+  std::cout << "DoubleVector:" << std::endl;
+  std::cout << "----------------" << std::endl;
+
+  std::cout << "Putting '77.0' and '65.0' in double vector" << std::endl;
+  
+  dv.put(77.0);
+  dv.put(65.0, 1);
+
+  std::cout << "Testing get method for 0 index: " << dv.get(0) << std::endl;
+  std::cout << "Testing get method for 1 index: " << dv.get(1) << std::endl;
+  std::cout << "Testing  the size method: " <<  dv.size() << std::endl;
+  std::cout << "Testing an out of range vale index 100: ";
+
+  try {
+     std::cout << dv.get(100) << std::endl;
+  }
+
+  catch(const std::out_of_range& oor) {
+   std::cout <<"Error: out of bounds!" << std::endl;
+  }
 
 std::cout << "-------------" << std::endl;
 
@@ -158,9 +165,10 @@ for (int i = 0; i < cv2.size(); ++i)
    // using empty DoubleVector, test appending iv & cv from above
 DoubleVector dv2;
 
-std::cout << std::endl; std::cout << "-------------------------" <<
-std::endl; std::cout << "appended-to DoubleVector:" << std::endl; std::cout
-<< "-------------------------" << std::endl;
+std::cout << std::endl;
+std::cout << "-------------------------" << std::endl;
+std::cout << "appended-to DoubleVector:" << std::endl;
+std::cout << "-------------------------" << std::endl;
 
 std::cout << "In CV: " << std::endl;
 for (int i = 0; i < cv.size(); ++i)
@@ -173,7 +181,7 @@ for (int i = 0; i < iv.size(); ++i)
 {
    std::cout << iv.get(i) << std::endl;
 }
-dv2.appendCharacterVector(cv);
+dv2.appendIntegerVector(iv);
 dv2.appendCharacterVector(cv);
 
 std::cout << "In DV2: " << std::endl;
