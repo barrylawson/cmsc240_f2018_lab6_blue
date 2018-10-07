@@ -34,7 +34,6 @@ int main()
   }
   catch(const std::out_of_range& oor)
   {
-     std::cerr << "Out of Range error:" << oor.what() << '\n'<< std::endl;
      std::cout <<"Error out of bounds!" << std::endl;
   }
 
