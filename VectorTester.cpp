@@ -138,7 +138,7 @@ for (int i = 0; i < iv.size(); ++i)
    std::cout << iv.get(i) << std::endl;
 }
 
-std::cout << "In DV: " << std:: endl;
+std::cout << "In DV: " << std::endl;
 for (int i = 0; i < dv.size(); ++i)
 {
    std::cout << dv.get(i) << std::endl;
@@ -162,6 +162,23 @@ DoubleVector dv2;
 std::cout << std::endl; std::cout << "-------------------------" <<
 std::endl; std::cout << "appended-to DoubleVector:" << std::endl; std::cout
 << "-------------------------" << std::endl;
+std::cout << "In DV2: " << std::endl;
+
+dv2.appendCharacterVector(cv);
+for(int i = 0; i < dv2.size(); i++) {
+    std::cout << dv2.get(i) << std::endl;
+   }
+
+std::cout << "[979797979897979799]" << std::endl;
+std::cout << std::endl;
+
+dv2.appendIntegerVector(iv);
+for(int i = 0; i < dv2.size(); i++) {
+    std::cout << dv2.get(i);
+   }
+std::cout << std::endl;
+std::cout << "[97979797989797979901234]" << std::endl;
+std::cout << std::endl;
 
    //-------------------------------------------------------------------------
 
